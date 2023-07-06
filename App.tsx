@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, Text, View } from "react-native";
+import styled from "styled-components/native";
+import Menu from "./components/Menu";
 
 export default function App() {
+  const Post = styled.View`
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+    color: red;
+  `;
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <StatusBar animated={true} />
+      <Menu />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
